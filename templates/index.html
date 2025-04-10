@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generation System - Submit CSV</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f5f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #007b83;
+      color: white;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 600;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      background-color: white;
+      padding: 40px;
+      margin-top: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 600px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+      text-align: left;
+      color: #555;
+    }
+
+    input[type="file"], select {
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007b83;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005f61;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    table {
+      margin-top: 30px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007b83;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>QR Code Generation System</header>
+
+  <div class="container">
+    <h1>Submit CSV File</h1>
+
+    <form action="/submit-csv" method="post" enctype="multipart/form-data">
+      <label for="branch">Select Branch:</label>
+      <select name="branch" id="branch" required>
+        <option value="">-- Select Branch --</option>
+        <option value="Woodlands">UEN123456N (Woodlands)</option>
+        <option value="SengKang">UEN654321S (SengKang)</option>
+        <option value="Juong">UEN987654E (Jurong)</option>
+        <option value="Harbourfront">UEN456789W (Harbourfront)</option>
+      </select>
+
+      <label for="csvFile">Choose a CSV file to upload:</label>
+      <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="message">
+      <p>Please ensure the file follows the correct CSV format before uploading.</p>
+    </div>
+<!--
+    {% if table %}
+      <div style="margin-top: 30px; text-align: left;">
+        <h2>Uploaded CSV Preview:</h2>
+        <div style="overflow-x: auto; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background-color: #fdfdfd;">
+          {{ table|safe }}
+        </div>
+      </div>
+    {% endif %}
+    -->
+  </div>
+
+</body>
+</html>

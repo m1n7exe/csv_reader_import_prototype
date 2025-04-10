@@ -1,0 +1,6 @@
+Invoice No,Child ID,Child Name,Student ID,Address,Parent/Guardian,Items,Billing Date,Amount,Paid Status,Remarks,UEN
+INV-1001,C001,Anna Lee,S001,123 Orchard Road  #10-01,John Lee,Laptop, Stationery,2025-04-01,350.0,Paid Delivered on time,UEN123456N
+INV-1002,C002,Ben Tan,S002,456 Bukit Timah  #03-04,Susan Tan,Books, Uniform,2025-04-05,120.0,Pending Waiting for payment,UEN123456N
+INV-1003,C003,Clara Wong,S003,789 Marine Parade  #12-09,Peter Wong,Tablet, Accessories,2025-04-07,500.0,Paid Free shipping applied,UEN123456N
+INV-1004,C004,David Chua,S004,321 Tampines Ave #05-06,Rachel Chua,Headphones, Bags,2025-04-08,220.0,Pending Delay in delivery,UEN123456N
+INV-1005,C005,Emily Tan,S005,987 Ang Mo Kio  #07-11,Mark Tan,Calculator, Markers,2025-04-10,80.0,Paid No issues,UEN123456N
